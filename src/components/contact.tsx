@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const TELEGRAM_BOT_TOKEN = "8119231817:AAGAmxzBGY0vBPeVFM2hEEBbXkoAUGxm_HE"; // Replace with your bot token
-const TELEGRAM_CHAT_ID = "6837437455"; // Replace with your chat ID
+const TELEGRAM_BOT_TOKEN = "8751431103:AAGGuqYak43oZW1BMmtMUsA1nFN1iAwOfUY"; // Replace with your bot token
+const TELEGRAM_CHAT_ID = "8837510968"; // Replace with your chat ID
 // const TELEGRAM_BOT_TOKEN = "7566743228:AAElkX2wNtU4BeA30fK-SgnRgeHxcjIKV8o"; // Replace with your bot token
 // const TELEGRAM_CHAT_ID = "7029898481"; // Replace with your chat ID
 
@@ -13,11 +13,12 @@ const ContactUs = () => {
     attachment: null as File | null,
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,10 +66,17 @@ const ContactUs = () => {
 
   return (
     <div className="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Contact Us</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
+        Contact Us
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Name
+          </label>
           <input
             id="name"
             type="text"
@@ -82,7 +90,12 @@ const ContactUs = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Email
+          </label>
           <input
             id="email"
             type="email"
@@ -96,7 +109,12 @@ const ContactUs = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -110,7 +128,12 @@ const ContactUs = () => {
         </div>
 
         <div>
-          <label htmlFor="attachment" className="block text-sm font-medium text-gray-700">Attachment (optional)</label>
+          <label
+            htmlFor="attachment"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Attachment (optional)
+          </label>
           <input
             id="attachment"
             type="file"
@@ -121,7 +144,10 @@ const ContactUs = () => {
           />
         </div>
 
-        <button type="submit" className="w-full bg-black hover:bg-blue-800 text-white py-2 px-4 rounded transition-all">
+        <button
+          type="submit"
+          className="w-full bg-black hover:bg-blue-800 text-white py-2 px-4 rounded transition-all"
+        >
           Send Message
         </button>
       </form>

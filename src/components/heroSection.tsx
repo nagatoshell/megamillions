@@ -8,17 +8,31 @@ import two from "../assets/2.webp";
 import three from "../assets/3.jpg";
 import four from "../assets/7.jpg";
 import five from "../assets/8.webp";
-import img from '../assets/056c54fe2dc77b78bd278120a690085e.jpg';
-import img2 from '../assets/159482c99b0367004f8a7e7313a4eed6.jpg';
-import two2 from '../assets/b64eba0b6e4f3192469d706725075fd9.jpg';
-import two3 from '../assets/1.jpg';
-import two4 from '../assets/2.webp';
-import two5 from '../assets/3.jpg';
-import two7 from '../assets/7.jpg';
-import two8 from '../assets/8.webp';
+import img from "../assets/056c54fe2dc77b78bd278120a690085e.jpg";
+import img2 from "../assets/159482c99b0367004f8a7e7313a4eed6.jpg";
+import two2 from "../assets/b64eba0b6e4f3192469d706725075fd9.jpg";
+import two3 from "../assets/1.jpg";
+import two4 from "../assets/2.webp";
+import two5 from "../assets/3.jpg";
+import two7 from "../assets/7.jpg";
+import two8 from "../assets/8.webp";
 
 const GallerySection = () => {
-  const images = [one, two, three, four, five , img , img2 , two2, two3, two4,two5,two7, two8];
+  const images = [
+    one,
+    two,
+    three,
+    four,
+    five,
+    img,
+    img2,
+    two2,
+    two3,
+    two4,
+    two5,
+    two7,
+    two8,
+  ];
 
   const settings = {
     dots: false,
@@ -50,12 +64,17 @@ const GallerySection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        See how United Way Benefits has helped thousands of people achieve financial stability.
+        See how MegaMillions has helped thousands of people achieve financial
+        stability.
       </motion.p>
       <Slider {...settings} className="w-4/5 mx-auto">
         {images.map((img, index) => (
           <motion.div key={index} whileHover={{ scale: 1.05 }} className="p-2">
-            <img src={img} alt={`Gallery ${index + 1}`} className="w-full h-64 object-cover rounded-lg shadow-lg" />
+            <img
+              src={img}
+              alt={`Gallery ${index + 1}`}
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
+            />
           </motion.div>
         ))}
       </Slider>
@@ -83,7 +102,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Empowering Lives with United Way Benefits
+          Empowering Lives with MegaMillions
         </motion.h1>
         <motion.p
           className="mt-2 text-sm md:text-lg px-4"
@@ -94,16 +113,15 @@ const HeroSection = () => {
           Access financial aid, grants, and resources to support your future.
         </motion.p>
         <div className="px-4">
-             <motion.button
-          className="mt-4 px-6 py-3 bg-black hover:bg-white hover:text-black text-white font-semibold  shadow-md transition"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          Claim Prize
-        </motion.button>
+          <motion.button
+            className="mt-4 px-6 py-3 bg-black hover:bg-white hover:text-black text-white font-semibold  shadow-md transition"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            Claim Prize
+          </motion.button>
         </div>
-       
       </div>
     </div>
   );
